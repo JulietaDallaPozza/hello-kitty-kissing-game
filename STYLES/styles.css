@@ -18,7 +18,8 @@ body {
     border-radius: 48%;
     border: 8px solid black;
     position: relative;
-    top: 230px;
+    /* top: 230px; */
+    top: 34%;
     left: -8px;
     z-index: 2;
 }
@@ -51,11 +52,21 @@ body {
 }
 
 .nose {
-    background: #f2dc04;
+    /* background: #f2dc04;
     width: 20px;
     height: 14px;
     border-radius: 50%;
     border: 4px solid black;
+    position: relative;
+    top: 138px;
+    left: 110px;
+    z-index: 3; */
+
+    background: #ff00b5;
+    width: 20px;
+    height: 14px;
+    border-radius: 50%;
+    border: 4px solid white;
     position: relative;
     top: 138px;
     left: 110px;
@@ -139,8 +150,10 @@ body {
 }
 
 .bow {
-    background: #E6002E;
-    border: 6px solid black;
+    /* background: #E6002E;
+    border: 6px solid black; */
+    background: #d85bff;
+    border: 6px solid rgb(60 255 0);
 }
 
 .bow-center {
@@ -230,6 +243,6 @@ body {
     font-family: monospace;
     font-size: 50px;
     position: absolute;
-        top: 50%;
-        left: 10%;
+    top: 50%;
+    left: 10%;
 }
