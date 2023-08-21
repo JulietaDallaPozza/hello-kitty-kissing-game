@@ -7,8 +7,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 400px;
-    padding: 180px;
+    height: 100%;
     text-align: center;
 }
 
@@ -229,8 +228,8 @@ body {
 
 .text {
     font-family: monospace;
-    font-size: 28px;
-    position: relative;
-    top: -416px;
-    left: -8px;
+    font-size: 50px;
+    position: absolute;
+        top: 50%;
+        left: 10%;
 }
