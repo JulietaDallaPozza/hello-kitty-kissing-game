@@ -211,21 +211,22 @@ body {
 .ear-detail {
     width: 41px;
     height: 41px;
-    border: 8px solid white;
+    border: 8px solid rgb(129, 146, 241);
     border-radius: 50%;
     background-color: white;
     position: relative;
     z-index: 3;
 }
 
-.ear-detail-left {
+/* .ear-detail-left {
     top: -466px;
     left: 16px;
-}
+} */
 
 .ear-detail-right {
     top: -520px;
     left: 170px;
+        border: 8px solid rgb(255, 255, 255);
 }
 
 .ear-line {
