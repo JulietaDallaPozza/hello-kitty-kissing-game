@@ -3,7 +3,7 @@
 
 
 
-// Function to create a new Hello Kitty head element
+// // Function to create a new Hello Kitty head element
 // function createHelloKitty() {
 //   const kittyContainer = document.createElement("div");
 //   kittyContainer.classList.add("container");
