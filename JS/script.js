@@ -28,19 +28,31 @@
 
 window.onload = function () {
     const startButton = document.getElementById("start-button");
+    let game;
 
-    startButton.addEventListener("click", function () {
-        start();
+    startButton.addEventListener("click", () => {
+        game = new Game(); // inizialisate the Game class when the button is clicked
+        game.start(); // start the game
+        console.log("game started");
     });
 
-    function start() {
-        console.log("KISS");
-        startButton.disabled = true; // disable the start button
+
+    console.log('hello kitty');
+
+    let clicks = 0;
+
+    let btn = document.createElement("button");
+    btn.textContent = "KISSED";
+    document.body.appendChild(btn);
+
+    btn.addEventListener("click", function () {
+        clicks++;
+        console.log(clicks);
+        btn.textContent = "KISSED: " + clicks;
+
+    });
 
 
-    
-        }
 
 
-
-    };
+};
