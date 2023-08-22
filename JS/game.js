@@ -7,10 +7,15 @@ class Game {
         this.gameScreen = document.querySelector("#game-screen");
         this.displayScore = document.querySelector("#score");
         this.gameEndScreen = document.querySelector("#game-end");
+        
+        console.log(this.displayScore)
 
+        this.clicks = 0;
         this.height = 300;
         this.width = 200;
         this.score = 0;
+
+        
     }
 
     start() {
@@ -37,6 +42,20 @@ class Game {
             kittyContainer.style.transform = `rotate(${Math.random() * 360}deg)`;
 
             kittyContainer.addEventListener("click", handleKittyClick);
+
+
+    
+
+            kittyContainer.addEventListener("click",e => {
+                // let counterElement = document.getElementById("score");
+               console.log( this.clicks) 
+                this.displayScore
+             // increment the click count
+                console.log(this.displayScore)
+            this.displayScore.textContent = "kISseS: " 
+                return kittyContainer;
+
+            });
 
             return kittyContainer;
         }
