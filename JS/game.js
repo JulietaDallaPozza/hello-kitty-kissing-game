@@ -19,5 +19,10 @@ class Game {
         this.displayScore = document.querySelector("#score");
         this.score = 0;
     }
-    
+
+    start() {
+   
+    }
+
+
 }
