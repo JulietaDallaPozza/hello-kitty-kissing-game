@@ -1,6 +1,18 @@
 body {
     background: #ffc1cc;
 }
+/* START GAME */
+body button {
+    font-size: 30px;
+    background-color: #870007;
+    color: #fff;
+    padding: 20px 40px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
 
 .container {
     position: absolute;
@@ -18,7 +30,8 @@ body {
     border-radius: 48%;
     border: 8px solid black;
     position: relative;
-    top: 230px;
+    /* top: 230px; */
+    top: 34%;
     left: -8px;
     z-index: 2;
 }
@@ -51,11 +64,21 @@ body {
 }
 
 .nose {
-    background: #f2dc04;
+    /* background: #f2dc04;
     width: 20px;
     height: 14px;
     border-radius: 50%;
     border: 4px solid black;
+    position: relative;
+    top: 138px;
+    left: 110px;
+    z-index: 3; */
+
+    background: #ff00b5;
+    width: 20px;
+    height: 14px;
+    border-radius: 50%;
+    border: 4px solid white;
     position: relative;
     top: 138px;
     left: 110px;
@@ -139,8 +162,10 @@ body {
 }
 
 .bow {
-    background: #E6002E;
-    border: 6px solid black;
+    /* background: #E6002E;
+    border: 6px solid black; */
+    background: #d85bff;
+    border: 6px solid rgb(60 255 0);
 }
 
 .bow-center {
@@ -198,21 +223,22 @@ body {
 .ear-detail {
     width: 41px;
     height: 41px;
-    border: 8px solid white;
+    border: 8px solid rgb(246 246 246 / 0%);
     border-radius: 50%;
-    background-color: white;
+    /* background-color: white; */
     position: relative;
     z-index: 3;
 }
 
-.ear-detail-left {
+/* .ear-detail-left {
     top: -466px;
     left: 16px;
-}
+} */
 
 .ear-detail-right {
     top: -520px;
     left: 170px;
+    border: 8px solid rgb(255, 255, 255);
 }
 
 .ear-line {
@@ -230,6 +256,13 @@ body {
     font-family: monospace;
     font-size: 50px;
     position: absolute;
-        top: 50%;
-        left: 10%;
+    top: 45%;
+    left: 10%;
+    letter-spacing: 20px;
+    transform: rotate(10deg);
+    z-index: 2;
+    -webkit-text-stroke: 3px black;
+        /* Adjust the stroke width */
+        color: transparent;
+        
 }
