@@ -1,20 +1,9 @@
-console.log('hello kitty');
-
-let clicks = 0;
-
-let btn = document.createElement("button");
-btn.textContent = "KISSED";
-document.body.appendChild(btn);
-
-btn.addEventListener("click", function () {
-    clicks++;
-    console.log(clicks);
-    btn.textContent = "KISSED: " + clicks;
-
-});
+// console.log('hello kitty');
 
 
-// Function to create a new Hello Kitty head element
+
+
+// // Function to create a new Hello Kitty head element
 // function createHelloKitty() {
 //   const kittyContainer = document.createElement("div");
 //   kittyContainer.classList.add("container");
