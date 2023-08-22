@@ -3,32 +3,28 @@
 
 
 
-// // Function to create a new Hello Kitty head element
+// // Function to create hello Kitty head element
+
 // function createHelloKitty() {
 //   const kittyContainer = document.createElement("div");
 //   kittyContainer.classList.add("container");
-//   // Copy the Hello Kitty HTML structure into the new container
 //   kittyContainer.innerHTML = document.querySelector(".container").innerHTML;
-//   // Apply styles to the container, e.g., position, random rotation, etc.
 //   kittyContainer.style.position = "absolute";
 //   kittyContainer.style.transform = `rotate(${Math.random() * 360}deg)`;
 
-//   // Add event listener to remove the kitty when clicked
 //   kittyContainer.addEventListener("click", handleKittyClick);
 
-//   // Return the new Hello Kitty container
 //   return kittyContainer;
 // }
 
-// // Function to handle Kitty click event
 // function handleKittyClick(event) {
 //   const kitty = event.currentTarget;
-//   // Add your interaction logic here (e.g., score increment, animation, etc.)
-//   // Remove the kitty element
+ 
 //   kitty.remove();
 // }
 
-// // Function to start the falling animation for a kitty
+// // function to start the falling animation for a kitty
+
 // function startFalling(kitty) {
 //   const container = document.getElementById("game-container");
 //   container.appendChild(kitty);
@@ -54,7 +50,7 @@
 //   };
 // }
 
-// // Start generating falling kitties
+// // start generating falling kitties
 // setInterval(() => {
 //   const newKitty = createHelloKitty();
 //   startFalling(newKitty);
