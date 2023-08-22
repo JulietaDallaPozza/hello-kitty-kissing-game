@@ -1,5 +1,7 @@
 body {
     background: #ffc1cc;
+    padding: 0;
+        text-align: center;
 }
 /* START GAME */
 body button {
