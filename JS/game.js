@@ -19,23 +19,34 @@ class Game {
         this.gameScreen.style.width = `${this.width}px`;
         this.startScreen.style.display = "none";
         this.gameScreen.style.display = "block";
+        this.intervalID = null;
         this.gameLoop();
         this.startTimer();
+    
 
     }
 
     startTimer() {
-        this.gameTimerScreen.innerHTML = this.sec;
-        if (sec < 15) {
-            ele.innerHTML = `00:0${sec}`;
-        } else {
-            ele.innerHTML = `00:${sec}`;
-        }
-        if (sec > 0) {
-            sec--;
-            setTimeout(startTimer, 1000);
-        } else {
-            ele.innerHTML = 'n0 mORe TiME tO Kiss kITTY';
+        // this.gameTimerScreen.innerHTML = this.sec;
+        // if (this.sec < 15) {
+        //     this.gameTimerScreen.innerHTML = `00:0${this.sec}`;
+        // } else {
+        //     this.gameTimerScreen.innerHTML = `00:${this.sec}`;
+        // }
+        // if (this.sec > 0) {
+        //     this.sec--;
+        //     setTimeout(this.startTimer, 1000);
+        // } else {
+        //     this.gameTimerScreen.innerHTML = 'n0 mORe TiME tO Kiss kITTY';
+        // }
+
+        this.intervalID = setInterval(() => {
+            this.sec--;
+            this.gameTimerScreen.innerHTML = this.sec;
+        }, 1000)
+
+        if(asdasdasd){
+            clearInterval(this.intervalID)
         }
     }
 
@@ -61,7 +72,6 @@ class Game {
             const kitty = event.currentTarget;
             kitty.remove();
         }
-
 
 
 
@@ -93,7 +103,7 @@ class Game {
             startFalling(newKitty);
         }, 300);
     }
-    
+
 }
 
 
