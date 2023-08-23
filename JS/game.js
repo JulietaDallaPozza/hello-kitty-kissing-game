@@ -1,13 +1,16 @@
+
 class Game {
     constructor() {
         this.startScreen = document.querySelector("#game-intro");
         this.gameScreen = document.querySelector("#game-screen");
         this.displayScore = document.querySelector("#score");
         this.gameEndScreen = document.querySelector("#game-end");
+        this.gameTimerScreen = document.querySelector("#timer");
         this.clicks = 0;
         this.height = 300;
         this.width = 200;
         this.score = 0;
+        this.sec = 15;
     }
 
     start() {
@@ -17,7 +20,25 @@ class Game {
         this.startScreen.style.display = "none";
         this.gameScreen.style.display = "block";
         this.gameLoop();
+        this.startTimer();
+
     }
+
+    startTimer() {
+        this.gameTimerScreen.innerHTML = this.sec;
+        if (sec < 15) {
+            ele.innerHTML = `00:0${sec}`;
+        } else {
+            ele.innerHTML = `00:${sec}`;
+        }
+        if (sec > 0) {
+            sec--;
+            setTimeout(startTimer, 1000);
+        } else {
+            ele.innerHTML = 'n0 mORe TiME tO Kiss kITTY';
+        }
+    }
+
 
     gameLoop() {
         // this.startScreen.style.display = "none";
@@ -40,6 +61,9 @@ class Game {
             const kitty = event.currentTarget;
             kitty.remove();
         }
+
+
+
 
         function startFalling(kitty) {
             const container = document.getElementById("game-container");
@@ -67,6 +91,9 @@ class Game {
         setInterval(() => {
             const newKitty = createHelloKitty();
             startFalling(newKitty);
-        }, 1000);
+        }, 300);
     }
+    
 }
+
+
