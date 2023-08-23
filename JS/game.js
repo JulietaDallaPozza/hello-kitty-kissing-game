@@ -10,7 +10,7 @@ class Game {
         this.height = 300;
         this.width = 200;
         this.score = 0;
-        this.sec = 11;
+        this.sec = 2;
     }
 
     start() {
@@ -19,35 +19,20 @@ class Game {
         this.gameScreen.style.width = `${this.width}px`;
         this.startScreen.style.display = "none";
         this.gameScreen.style.display = "block";
-        this.intervalID = null;
+        this.intervalCounter = null;
+        this.intervalKitties = null;
         this.gameLoop();
         this.startTimer();
-
-
     }
 
     startTimer() {
-        // this.gameTimerScreen.innerHTML = this.sec;
-        // if (this.sec < 15) {
-        //     this.gameTimerScreen.innerHTML = `00:0${this.sec}`;
-        // } else {
-        //     this.gameTimerScreen.innerHTML = `00:${this.sec}`;
-        // }
-        // if (this.sec > 0) {
-        //     this.sec--;
-        //     setTimeout(this.startTimer, 1000);
-        // } else {
-        //     this.gameTimerScreen.innerHTML = 'n0 mORe TiME tO Kiss kITTY';
-        // }
 
-        this.intervalID = setInterval(() => {
+        this.intervalCounter = setInterval(() => {
             this.sec--;
             this.gameTimerScreen.innerHTML = this.sec;
-            if (this.sec === 0) {
-                this.gameTimerScreen.innerHTML = 'n0 mORe TiME tO Kiss kITTY';
-                clearInterval(this.intervalID);
+            if (this.sec < 1) {
+                this.gameOver()
             }
-            
         }, 1000)
     }
 
@@ -99,10 +84,22 @@ class Game {
         }
 
         // start generating falling kitties
-        setInterval(() => {
+        this.intervalKitties = setInterval(() => {
             const newKitty = createHelloKitty();
             startFalling(newKitty);
+            if (this.sec < 1) {
+                this.gameOver()
+            }
         }, 300);
+
+
+    }
+
+    gameOver() {
+        // this.gameScreen.style.display = "none";
+        this.gameTimerScreen.innerHTML = 'n0 mORe TiME for kITTY kiSSess';
+        clearInterval(this.intervalKitties);
+        clearInterval(this.intervalCounter);
     }
 
 }
