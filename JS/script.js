@@ -36,11 +36,22 @@ window.onload = function () {
         console.log("game started");
     });
 
-
-
-
-
-
-
-
 };
+
+// let button = document.querySelectorAll('.fa-star')[0];
+
+// button.addEventListener('click', goldStar, false);
+
+// window.addEventListener('webkitAnimationEnd', disableStar, false);
+// window.addEventListener('animationend', disableStar, false);
+
+// function goldStar() {
+//     body.classList.add('star');
+// }
+
+// function disableStar() {
+//     body.classList.remove('star');
+// }
+
+// console.log(star);
+
