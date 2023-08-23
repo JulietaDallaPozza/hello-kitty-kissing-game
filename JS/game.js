@@ -4,8 +4,9 @@ class Game {
         this.startScreen = document.querySelector("#game-intro");
         this.gameScreen = document.querySelector("#game-screen");
         this.displayScore = document.querySelector("#score");
-        this.gameEndScreen = document.querySelector("#game-end");
         this.gameTimerScreen = document.querySelector("#timer");
+        this.gameEndScreen = document.querySelector("#game-end");
+
         this.clicks = 0;
         this.height = 300;
         this.width = 200;
@@ -38,8 +39,7 @@ class Game {
 
 
     gameLoop() {
-        // this.startScreen.style.display = "none";
-        // this.gameScreen.style.display = "none";
+
 
         const self = this;
         function createHelloKitty() {
@@ -97,9 +97,13 @@ class Game {
 
     gameOver() {
         // this.gameScreen.style.display = "none";
-        this.gameTimerScreen.innerHTML = 'n0 mORe TiME for kITTY kiSSess';
+        // this.gameEndScreen.style.display = block;
+        this.gameEndScreen.innerHTML = document.querySelector("#restart-button");
+         this.gameTimerScreen.innerHTML = 'n0 mORe TiME for kITTY kiSSess';
         clearInterval(this.intervalKitties);
         clearInterval(this.intervalCounter);
+
+      
     }
 
 }
