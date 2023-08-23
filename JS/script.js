@@ -35,12 +35,4 @@ window.onload = function () {
         game.start(); // start the game
         console.log("game started");
     });
-
-
-
-
-
-
-
-
 };
