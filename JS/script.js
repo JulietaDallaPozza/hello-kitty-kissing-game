@@ -9,4 +9,14 @@ window.onload = function () {
         game.start(); // start the game
         console.log("game started");
     });
+
+
+    const restartButton = document.getElementById("restart-button");
+    restartButton.addEventListener("click", () => {
+        game = new Game();
+        game.start(); 
+        console.log("restarted game");
+
+    });
+
 };
