@@ -16,6 +16,10 @@ window.onload = function () {
         game = new Game();
         game.start(); 
         console.log("restarted game");
+        restartButton.style.display = "none";
+
+       
+
 
     });
 
