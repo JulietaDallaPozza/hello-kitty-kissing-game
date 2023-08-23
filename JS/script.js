@@ -10,6 +10,7 @@ window.onload = function () {
         console.log("game started");
     });
 
+};
 
     const restartButton = document.getElementById("restart-button");
     restartButton.addEventListener("click", () => {
@@ -23,4 +24,3 @@ window.onload = function () {
 
     });
 
-};
