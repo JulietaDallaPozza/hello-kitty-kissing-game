@@ -1,13 +1,17 @@
+
 class Game {
     constructor() {
         this.startScreen = document.querySelector("#game-intro");
         this.gameScreen = document.querySelector("#game-screen");
         this.displayScore = document.querySelector("#score");
-        this.gameEndScreen = document.querySelector("#game-end");
+        this.gameTimerScreen = document.querySelector("#timer");
+        this.restartButton = document.querySelector("#restart-button");
+
         this.clicks = 0;
         this.height = 300;
         this.width = 200;
         this.score = 0;
+        this.sec = 2;
     }
 
     start() {
@@ -16,12 +20,26 @@ class Game {
         this.gameScreen.style.width = `${this.width}px`;
         this.startScreen.style.display = "none";
         this.gameScreen.style.display = "block";
+        this.intervalCounter = null;
+        this.intervalKitties = null;
         this.gameLoop();
+        this.startTimer();
     }
 
+    startTimer() {
+
+        this.intervalCounter = setInterval(() => {
+            this.sec--;
+            this.gameTimerScreen.innerHTML = this.sec;
+            if (this.sec < 1) {
+                this.gameOver()
+            }
+        }, 1000)
+    }
+
+
     gameLoop() {
-        // this.startScreen.style.display = "none";
-        // this.gameScreen.style.display = "none";
+
 
         const self = this;
         function createHelloKitty() {
@@ -40,6 +58,8 @@ class Game {
             const kitty = event.currentTarget;
             kitty.remove();
         }
+
+
 
         function startFalling(kitty) {
             const container = document.getElementById("game-container");
@@ -64,9 +84,28 @@ class Game {
         }
 
         // start generating falling kitties
-        setInterval(() => {
+        this.intervalKitties = setInterval(() => {
             const newKitty = createHelloKitty();
             startFalling(newKitty);
-        }, 1000);
+            if (this.sec < 1) {
+                this.gameOver()
+            }
+        }, 300);
+
+
     }
+
+    gameOver() {
+        
+        this.gameTimerScreen.innerHTML = 'n0 mORe TiME for kITTY kiSSess';
+        clearInterval(this.intervalKitties);
+        clearInterval(this.intervalCounter);
+        this.restartButton.style.display = "block";
+
+       
+      
+    }
+
 }
+
+
