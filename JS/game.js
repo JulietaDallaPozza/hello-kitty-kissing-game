@@ -10,7 +10,7 @@ class Game {
         this.height = 300;
         this.width = 200;
         this.score = 0;
-        this.sec = 15;
+        this.sec = 11;
     }
 
     start() {
@@ -22,7 +22,7 @@ class Game {
         this.intervalID = null;
         this.gameLoop();
         this.startTimer();
-    
+
 
     }
 
@@ -43,11 +43,12 @@ class Game {
         this.intervalID = setInterval(() => {
             this.sec--;
             this.gameTimerScreen.innerHTML = this.sec;
+            if (this.sec === 0) {
+                this.gameTimerScreen.innerHTML = 'n0 mORe TiME tO Kiss kITTY';
+                clearInterval(this.intervalID);
+            }
+            
         }, 1000)
-
-        if(asdasdasd){
-            clearInterval(this.intervalID)
-        }
     }
 
 
