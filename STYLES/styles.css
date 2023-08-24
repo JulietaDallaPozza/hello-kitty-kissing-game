@@ -3,7 +3,7 @@ body {
     padding: 0;
     text-align: center; */
 
-background: linear-gradient(-45deg, #b4f371, #e73c7e, #a75fe6, #23d5ab);
+    background: linear-gradient(-45deg, #b4f371, #e73c7e, #a75fe6, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
@@ -25,8 +25,6 @@ background: linear-gradient(-45deg, #b4f371, #e73c7e, #a75fe6, #23d5ab);
 }
 
 
-
-
 body button {
     background: none;
     border: none;
@@ -35,10 +33,20 @@ body button {
     cursor: pointer;
 }
 
+.start-button-text {
+    font-family: monospace;
+    letter-spacing: 20px;
+    transform: rotate(10deg);
+    z-index: 2;
+    -webkit-text-stroke: 3px black;
+    color: transparent;
+}
+
+
 .five-pointed-star {
-    --star-color: orange;
+    --star-color: rgb(203, 124, 239);
     margin: 1em auto;
-    font-size: 10em;
+    font-size: 7em;
     position: relative;
     display: block;
     width: 0px;
@@ -87,6 +95,15 @@ body button {
     transform: translate(-50%, -50%);
     height: 100%;
     text-align: center;
+}
+
+
+.kisses {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .hello-kitty {
@@ -328,7 +345,6 @@ body button {
     transform: rotate(10deg);
     z-index: 2;
     -webkit-text-stroke: 3px black;
-    /* Adjust the stroke width */
     color: transparent;
 
 }
@@ -340,4 +356,11 @@ body button {
 .restart-button {
     position: absolute;
     bottom: 10%;
+    font-size: 1em;
+    font-family: monospace;
+    letter-spacing: 20px;
+    transform: rotate(10deg);
+    z-index: 2;
+    -webkit-text-stroke: 3px black;
+    color: transparent;
 }
