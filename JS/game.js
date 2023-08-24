@@ -6,7 +6,7 @@ class Game {
         this.displayScore = document.querySelector("#score");
         this.gameTimerScreen = document.querySelector("#timer");
         this.restartButton = document.querySelector("#restart-button");
-
+        this.endText = document.querySelector("#on-timer-end");
         this.clicks = 0;
         this.height = 300;
         this.width = 200;
@@ -55,6 +55,11 @@ class Game {
             this.displayScore.innerHTML = this.clicks;
             const kitty = event.currentTarget;
             kitty.remove();
+
+            
+            const kissSound = document.getElementById("kiss-sound");   
+            kissSound.play();
+          
         }
 
 
@@ -94,8 +99,7 @@ class Game {
     }
 
     gameOver() {
-        this.gameTimerScreen = document.querySelector("#on-timer-end");
-        // this.gameTimerScreen.innerHTML = 'n0 mORe TiME for kITTY kiSSess';
+        this.endText.innerHTML = 'n0 mORe TiME for kITTY kiSSess';
         clearInterval(this.intervalKitties);
         clearInterval(this.intervalCounter);
         this.restartButton.style.display = "block";
