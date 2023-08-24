@@ -1,7 +1,4 @@
 body {
-    /* background-image: radial-gradient(circle, #edc9db, #f391c3);
-    padding: 0;
-    text-align: center; */
 
     background: linear-gradient(-45deg, #b4f371, #e73c7e, #a75fe6, #23d5ab);
     background-size: 400% 400%;
@@ -35,8 +32,10 @@ body button {
 
 .start-button-text {
     font-family: monospace;
+    text-align: right !important;
+    padding-left: auto;
     letter-spacing: 20px;
-    transform: rotate(10deg);
+    /* transform: rotate(10deg); */
     z-index: 2;
     -webkit-text-stroke: 3px black;
     color: transparent;
@@ -44,6 +43,7 @@ body button {
 
 
 .five-pointed-star {
+
     --star-color: rgb(203, 124, 239);
     margin: 1em auto;
     font-size: 7em;
@@ -54,7 +54,7 @@ body button {
     border-right: 1em solid transparent;
     border-bottom: 0.7em solid var(--star-color);
     border-left: 1em solid transparent;
-    transform: rotate(35deg);
+    transform: rotate(-25deg);
 }
 
 .five-pointed-star:before {
@@ -97,6 +97,30 @@ body button {
     text-align: center;
 }
 
+.game-kisses-text {
+    position: relative;
+    height: 20vh;
+    left: 1.2em;
+    font-size: 4em;
+    font-family: monospace;
+    letter-spacing: 20px;
+    transform: rotate(10deg);
+    z-index: 2;
+    -webkit-text-stroke: 3px black;
+    color: transparent;
+}
+
+#timer {
+    font-size: 4em;
+    padding: 1em;
+    left: 1.2em;
+    font-family: monospace;
+    letter-spacing: 20px;
+    transform: rotate(-15deg);
+    z-index: 2;
+    -webkit-text-stroke: 3px black;
+    color: transparent;
+}
 
 .kisses {
     position: relative;
@@ -106,6 +130,7 @@ body button {
     align-items: flex-end;
 }
 
+/* HELLO KITTY */
 .hello-kitty {
     background: white;
     width: 242px;
@@ -349,6 +374,8 @@ body button {
 
 }
 
+
+/* BUTTONS */
 #restart-button {
     display: none;
 }
@@ -356,7 +383,24 @@ body button {
 .restart-button {
     position: absolute;
     bottom: 10%;
+
+}
+
+.restart-button-text {
     font-size: 1em;
+    font-family: monospace;
+    letter-spacing: 20px;
+    transform: rotate(10deg);
+    z-index: 2;
+    -webkit-text-stroke: 3px black;
+    color: transparent;
+}
+
+.kisses-text {
+    position: absolute;
+    bottom: 10vh;
+    left: 10vh;
+    font-size: 4em;
     font-family: monospace;
     letter-spacing: 20px;
     transform: rotate(10deg);
