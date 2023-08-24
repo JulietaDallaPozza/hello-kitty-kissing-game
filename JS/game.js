@@ -11,7 +11,7 @@ class Game {
         this.height = 300;
         this.width = 200;
         this.score = 0;
-        this.sec = 2;
+        this.sec = 30;
     }
 
     start() {
@@ -39,8 +39,6 @@ class Game {
 
 
     gameLoop() {
-
-
         const self = this;
         function createHelloKitty() {
             const kittyContainer = document.createElement("div");
@@ -64,10 +62,10 @@ class Game {
         function startFalling(kitty) {
             const container = document.getElementById("game-container");
             container.appendChild(kitty);
-            const startPosition = Math.random() * (window.innerWidth - 100);
+            const startPosition = Math.random() * 700 + 200;
             const startRotation = Math.random() * 360;
             const duration = Math.random() * 4000 + 2000;
-            kitty.style.left = `${startPosition}px`;
+            kitty.style.left = startPosition + "px";
             kitty.style.transform = `rotate(${startRotation}deg)`;
             kitty.animate(
                 [
@@ -102,8 +100,8 @@ class Game {
         clearInterval(this.intervalCounter);
         this.restartButton.style.display = "block";
 
-       
-      
+
+
     }
 
 }

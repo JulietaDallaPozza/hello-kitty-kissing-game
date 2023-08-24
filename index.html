@@ -11,7 +11,7 @@
 
 <body>
     <div id="game-intro">
-        <br/>
+        <br />
 
         <button id="start-button" class="five-pointed-star start-button-text">cliCK To sTart</button>
         <div class="kisses-text">
@@ -20,8 +20,11 @@
     </div>
     <div id="game-screen" style="display: none;">
         <div id="game-container">
+            <div id="on-timer-end">
+                show me only when the timer is done
+            </div>
             <div class="game-kisses-text">
-            <p>kISseS <span id="score">0</span></p>
+                <p>kISseS <span id="score">0</span></p>
             </div>
             <div id="game-timer">
                 <div id="timer">
@@ -86,7 +89,7 @@
 
 
     <div id="game-end">
-        <div id="restart-button" class="five-pointed-star">
+        <div id="restart-button" class="five-pointed-star restart-star">
             <button class="restart-button restart-button-text">Restart</button>
         </div>
     </div>

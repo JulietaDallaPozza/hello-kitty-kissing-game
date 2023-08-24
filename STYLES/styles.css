@@ -21,6 +21,7 @@ body {
 
 }
 
+/* INTRO */
 
 body button {
     background: none;
@@ -28,6 +29,11 @@ body button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+
+#game-intro {
+    padding: 4em;
 }
 
 .start-button-text {
@@ -106,7 +112,7 @@ body button {
     letter-spacing: 20px;
     transform: rotate(10deg);
     z-index: 2;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 2px black;
     color: transparent;
 }
 
@@ -118,7 +124,7 @@ body button {
     letter-spacing: 20px;
     transform: rotate(-15deg);
     z-index: 2;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 2px black;
     color: transparent;
 }
 
@@ -380,20 +386,31 @@ body button {
     display: none;
 }
 
-.restart-button {
+/* .restart-button {
     position: absolute;
-    bottom: 10%;
+    right: 5%;
+    bottom: 10px
 
-}
+} */
 
 .restart-button-text {
-    font-size: 1em;
+    font-size: 0.7em;
     font-family: monospace;
-    letter-spacing: 20px;
-    transform: rotate(10deg);
+    letter-spacing: 30px;
+    transform: rotate(45deg);
     z-index: 2;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 2px black;
     color: transparent;
+    position: relative;
+    top: 1em;
+    left: -3em;
+}
+
+.restart-star {
+    position: absolute;
+    bottom: 10%;
+    left: 60%;
+    transform: rotate(-55deg);
 }
 
 .kisses-text {
@@ -405,6 +422,6 @@ body button {
     letter-spacing: 20px;
     transform: rotate(10deg);
     z-index: 2;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 2px black;
     color: transparent;
 }
