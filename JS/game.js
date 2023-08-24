@@ -7,11 +7,12 @@ class Game {
         this.gameTimerScreen = document.querySelector("#timer");
         this.restartButton = document.querySelector("#restart-button");
         this.endText = document.querySelector("#on-timer-end");
+        this.secondsText = document.querySelector("#seconds-left")
         this.clicks = 0;
         this.height = 300;
         this.width = 200;
         this.score = 0;
-        this.sec = 2;
+        this.sec = 11;
     }
 
     start() {
@@ -31,6 +32,8 @@ class Game {
         this.intervalCounter = setInterval(() => {
             this.sec--;
             this.gameTimerScreen.innerHTML = this.sec;
+            this.secondsText.innerHTML = 'sECondS LEft';
+
             if (this.sec < 1) {
                 this.gameOver()
             }
@@ -56,10 +59,10 @@ class Game {
             const kitty = event.currentTarget;
             kitty.remove();
 
-            
-            const kissSound = document.getElementById("kiss-sound");   
+
+            const kissSound = document.getElementById("kiss-sound");
             kissSound.play();
-          
+
         }
 
 
