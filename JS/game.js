@@ -56,8 +56,10 @@ class Game {
             const kitty = event.currentTarget;
             kitty.remove();
 
-            const kissSound = document.getElementById("kiss-sound");
+            
+            const kissSound = document.getElementById("kiss-sound");   
             kissSound.play();
+          
         }
 
 
