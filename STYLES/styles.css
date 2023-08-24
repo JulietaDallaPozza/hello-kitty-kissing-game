@@ -130,7 +130,7 @@ body button {
 }
 
 #on-timer-end {
-    font-size: 4em;
+    font-size: 4.2em;
     font-family: monospace;
     letter-spacing: 20px;
     transform: rotate(-15deg);
@@ -140,7 +140,7 @@ body button {
     position: absolute;
     bottom: 10%;
     width: 3em;
-    left: 1.4em;
+    left: 2.2em;
 }
 
 #seconds-left {
