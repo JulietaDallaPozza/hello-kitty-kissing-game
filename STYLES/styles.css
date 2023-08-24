@@ -138,6 +138,10 @@ body button {
     z-index: 2;
     -webkit-text-stroke: 2px black;
     color: transparent;
+    position: absolute;
+    bottom: 10%;
+    width: 3em;
+    left: 1.4em;
 }
 
 .kisses {
