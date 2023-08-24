@@ -55,6 +55,9 @@ class Game {
             this.displayScore.innerHTML = this.clicks;
             const kitty = event.currentTarget;
             kitty.remove();
+
+            const kissSound = document.getElementById("kiss-sound");
+            kissSound.play();
         }
 
 
