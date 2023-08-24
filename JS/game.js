@@ -11,7 +11,7 @@ class Game {
         this.height = 300;
         this.width = 200;
         this.score = 0;
-        this.sec = 30;
+        this.sec = 2;
     }
 
     start() {
@@ -94,8 +94,8 @@ class Game {
     }
 
     gameOver() {
-        
-        this.gameTimerScreen.innerHTML = 'n0 mORe TiME for kITTY kiSSess';
+        this.gameTimerScreen = document.querySelector("#on-timer-end");
+        // this.gameTimerScreen.innerHTML = 'n0 mORe TiME for kITTY kiSSess';
         clearInterval(this.intervalKitties);
         clearInterval(this.intervalCounter);
         this.restartButton.style.display = "block";
