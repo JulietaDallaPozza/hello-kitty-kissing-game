@@ -1,65 +1,80 @@
-// console.log('hello kitty');
-
-// let clicks = 0;
-
-// let btn = document.createElement("button");
-// btn.textContent = "KISSED";
-// document.body.appendChild(btn);
-
-// btn.addEventListener("click", function () {
-//     clicks++;
-//     console.log(clicks);
-//     btn.textContent = "KISSED: " + clicks;
-
-// });
-
 
 class Game {
     constructor() {
-        this.startScreen = document.querySelector("#game-intro"); //holds the div element #game-intro. To access the element, use either document.getElementById() or document.querySelector().
+        this.startScreen = document.querySelector("#game-intro");
+        this.gameScreen = document.querySelector("#game-screen");
         this.displayScore = document.querySelector("#score");
-        this.gameEndScreen = document.querySelector("#game-end");
-
+        this.gameTimerScreen = document.querySelector("#timer");
+        this.restartButton = document.querySelector("#restart-button");
+        this.endText = document.querySelector("#on-timer-end");
+        this.secondsText = document.querySelector("#seconds-left")
+        this.clicks = 0;
+        this.height = 300;
+        this.width = 200;
         this.score = 0;
+        this.sec = 11;
     }
 
     start() {
         console.log("started");
+        this.gameScreen.style.height = `${this.height}px`;
+        this.gameScreen.style.width = `${this.width}px`;
         this.startScreen.style.display = "none";
+        this.gameScreen.style.display = "block";
+        this.intervalCounter = null;
+        this.intervalKitties = null;
         this.gameLoop();
+        this.startTimer();
     }
 
-    gameLoop() {
+    startTimer() {
 
+        this.intervalCounter = setInterval(() => {
+            this.sec--;
+            this.gameTimerScreen.innerHTML = this.sec;
+            this.secondsText.innerHTML = 'sECondS LEft';
+
+            if (this.sec < 1) {
+                this.gameOver()
+            }
+        }, 1000)
+    }
+
+
+    gameLoop() {
+        const self = this;
         function createHelloKitty() {
             const kittyContainer = document.createElement("div");
             kittyContainer.classList.add("container");
             kittyContainer.innerHTML = document.querySelector(".container").innerHTML;
             kittyContainer.style.position = "absolute";
             kittyContainer.style.transform = `rotate(${Math.random() * 360}deg)`;
-
-            kittyContainer.addEventListener("click", handleKittyClick);
-
+            kittyContainer.addEventListener("click", handleKittyClick.bind(self), false);
             return kittyContainer;
         }
 
         function handleKittyClick(event) {
+            this.clicks++;
+            this.displayScore.innerHTML = this.clicks;
             const kitty = event.currentTarget;
-
             kitty.remove();
+
+
+            const kissSound = document.getElementById("kiss-sound");
+            kissSound.play();
+
         }
+
+
 
         function startFalling(kitty) {
             const container = document.getElementById("game-container");
             container.appendChild(kitty);
-
-            const startPosition = Math.random() * (window.innerWidth - 100);
+            const startPosition = Math.random() * 700 + 200;
             const startRotation = Math.random() * 360;
             const duration = Math.random() * 4000 + 2000;
-
-            kitty.style.left = `${startPosition}px`;
+            kitty.style.left = startPosition + "px";
             kitty.style.transform = `rotate(${startRotation}deg)`;
-
             kitty.animate(
                 [
                     { top: "-100px", opacity: 1 },
@@ -75,14 +90,27 @@ class Game {
         }
 
         // start generating falling kitties
-        setInterval(() => {
+        this.intervalKitties = setInterval(() => {
             const newKitty = createHelloKitty();
             startFalling(newKitty);
-        }, 1000);
+            if (this.sec < 1) {
+                this.gameOver()
+            }
+        }, 300);
+
+
+    }
+
+    gameOver() {
+        this.endText.innerHTML = 'n0 mORe TiME for kITTY kiSSess';
+        clearInterval(this.intervalKitties);
+        clearInterval(this.intervalCounter);
+        this.restartButton.style.display = "block";
 
 
 
     }
 
 }
+
 

@@ -6,79 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="STYLES/styles.css">
 
-    <title>Document</title>
+    <title>kissing kitty game</title>
 </head>
 
 <body>
     <div id="game-intro">
-        <br/>
-        <button id="start-button">CLICK KITTY TO KISS HER</button>
-        <p>gIvE heR ManY Kisses!!</p>
-    </div>
-    <div id="game-container">
-        <p>KISSES <span id="score">0</span></p>
+        <br />
 
-        <div class="container">
-            <div class="hello-kitty"></div>
-            <div class="eye-container">
-                <div class="eye left-eye"></div>
-                <div class="eye right-eye"></div>
-            </div>
-            <div class="nose"></div>
-            <div class="whisker-container">
-                <div class="whisker w1"></div>
-                <div class="whisker w2"></div>
-                <div class="whisker w3"></div>
-                <div class="whisker w4"></div>
-                <div class="whisker w5"></div>
-                <div class="whisker w6"></div>
-
-            </div>
-
-            <div class="ear-container">
-
-                <div class="ear left-ear">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="60" viewBox="0 0 256 256">
-                        <rect width="256" height="256" fill="none" />
-                        <line x1="128" y1="56" x2="128" y2="180" fill="none" stroke="#000" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="8" />
-                        <path
-                            d="M187.1,152.4c7.9.4,29.1-1.3,36.9-32.4s14.9-72-16-72-80,48-80,80c0-32-49.1-80-80-80S24,88,32,120s29,32.8,36.9,32.4"
-                            fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" />
-                        <path d="M88,144.2A36,36,0,1,0,128,180a36,36,0,1,0,40-35.8" fill="none" stroke="#000"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="8" />
-                    </svg>
-                </div>
-                <div class="ear right-ear">
-                </div>
-
-            </div>
-            <div class="bow-container">
-                <div class="bow bow-center"></div>
-                <div class="bow bow-left"></div>
-                <div class="bow bow-right"></div>
-                <div class="bow bow-detail-left"></div>
-                <div class="bow bow-detail-right"></div>
-            </div>
-            <div class="ear-container">
-                <div class="ear-detail ear-detail-left"></div>
-                <div class="ear-detail ear-detail-right"></div>
-                <div class="ear-line"></div>
-            </div>
-
-            <b>
-                <p class="text">kIsS KItTY </p>
-            </b>
+        <button id="start-button" class="five-pointed-star start-button-text">cliCK To sTart</button>
+        <div class="kisses-text">
+            <p>gIvE heR ManY Kisses by clICKinG!!</p>
         </div>
     </div>
+    <div id="game-screen" style="display: none;">
+        <div id="game-container">
+            <div id="on-timer-end">
+
+            </div>
+            <div class="game-kisses-text">
+                <p>kISseS <span id="score">0</span></p>
+            </div>
+            <div id="game-timer">
+                <span id="seconds-left"></span>
+
+                <div id="timer">
+
+                </div>
+            </div>
+            <div class="container">
+                <audio id="kiss-sound" src="./audio/mixkit-little-cute-kiss-2192.wav" preload="auto"></audio>
+                <div class="hello-kitty"></div>
+                <div class="eye-container">
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                </div>
+                <div class="nose"></div>
+                <div class="whisker-container">
+                    <div class="whisker w1"></div>
+                    <div class="whisker w2"></div>
+                    <div class="whisker w3"></div>
+                    <div class="whisker w4"></div>
+                    <div class="whisker w5"></div>
+                    <div class="whisker w6"></div>
+
+                </div>
+
+                <div class="ear-container">
+
+                    <div class="ear left-ear">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="60" viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none" />
+                            <line x1="128" y1="56" x2="128" y2="180" fill="none" stroke="#000" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="8" />
+                            <path
+                                d="M187.1,152.4c7.9.4,29.1-1.3,36.9-32.4s14.9-72-16-72-80,48-80,80c0-32-49.1-80-80-80S24,88,32,120s29,32.8,36.9,32.4"
+                                fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="8" />
+                            <path d="M88,144.2A36,36,0,1,0,128,180a36,36,0,1,0,40-35.8" fill="none" stroke="#000"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="8" />
+                        </svg>
+                    </div>
+                    <div class="ear right-ear">
+                    </div>
+
+                </div>
+                <div class="bow-container">
+                    <div class="bow bow-center"></div>
+                    <div class="bow bow-left"></div>
+                    <div class="bow bow-right"></div>
+                    <div class="bow bow-detail-left"></div>
+                    <div class="bow bow-detail-right"></div>
+                </div>
+                <div class="ear-container">
+                    <div class="ear-detail ear-detail-left"></div>
+                    <div class="ear-detail ear-detail-right"></div>
+                    <div class="ear-line"></div>
+                </div>
+
+                <b>
+                    <p class="text">kIsS KItTY </p>
+                </b>
+            </div>
+        </div>
+    </div>
+
+
     <div id="game-end">
-        <button id="restart-button">Restart</button>
+        <div id="restart-button" class="five-pointed-star restart-star">
+            <button class="restart-button restart-button-text">Restart</button>
+        </div>
     </div>
 </body>
 
 <script src="JS/game.js"></script>
 <script src="JS/script.js"></script>
-<script src="JS/index.js"></script>
+
 
 </html>
