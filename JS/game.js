@@ -31,7 +31,7 @@ class Game {
     startTimer() {
         // start a timer that runs every second
         this.intervalCounter = setInterval(() => {
-            this.sec--; // Decrease the seconds
+            this.sec--; // decrease the seconds
             this.gameTimerScreen.innerHTML = this.sec;
             this.secondsText.innerHTML = 'sECondS LEft';
             //check if time is up and finish the lopp 
