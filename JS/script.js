@@ -5,9 +5,8 @@ window.onload = function () {
     let game;
 
     startButton.addEventListener("click", () => {
-        game = new Game(); // inizialisate the Game class when the button is clicked
+        game = new Game(); // inizialisate the game class when the button is clicked
         game.start(); // start the game
-        console.log("game started");
     });
 
 };
@@ -16,7 +15,6 @@ window.onload = function () {
     restartButton.addEventListener("click", () => {
         game = new Game();
         game.start(); 
-        console.log("restarted game");
         restartButton.style.display = "none";
 
     
