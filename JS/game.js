@@ -12,7 +12,7 @@ class Game {
         this.height = 300;
         this.width = 200;
         this.score = 0;
-        this.sec = 11;
+        this.sec = 2;
     }
 
     start() { //function defition

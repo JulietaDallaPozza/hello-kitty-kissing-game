@@ -141,6 +141,9 @@ body button {
     width: 3em;
     left: 4em;
 }
+.hideable-element{
+    display: none;
+}
 
 #seconds-left {
     font-size: 2.7em;
