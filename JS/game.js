@@ -1,4 +1,5 @@
 
+
 class Game {
     constructor() {  //creating properties of the game 
         this.startScreen = document.querySelector("#game-intro");
@@ -20,6 +21,7 @@ class Game {
         this.gameScreen.style.height = `${this.height}px`;
         this.gameScreen.style.width = `${this.width}px`;
         this.startScreen.style.display = "none";  // hiding the game screen to only show the start button 
+        this.gameScreen.style.display = "block";
         this.intervalCounter = null; //initializes a variable for the counter
         this.intervalKitties = null; //same for the kittis
         this.gameLoop(); //calling functions
