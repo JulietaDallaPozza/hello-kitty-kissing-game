@@ -8,7 +8,7 @@ window.onload = function () {
     startButton.addEventListener("click", () => {
         game = new Game(); // inizialisate the game class when the button is clicked
         game.start(); // start the game
-        // this.endText.style.display = "none";
+        onTimerEnd.style.display = "none";
 
         playMusic.play();
 
@@ -21,7 +21,7 @@ window.onload = function () {
         game = new Game();
         game.start(); 
         restartButton.style.display = "none";
-        // this.endText.style.display = "none";
+        // this.onTimerEnd.style.display = "none";
 
         
 

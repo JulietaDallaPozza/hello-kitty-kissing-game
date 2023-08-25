@@ -48,7 +48,7 @@ class Game {
             kittyContainer.classList.add("container");  // copy HTML content from an existing container
             kittyContainer.innerHTML = document.querySelector(".container").innerHTML; // set CSS properties for positioning and rotation
             kittyContainer.style.position = "absolute";
-            kittyContainer.style.transform = `rotate(${Math.random() * 360}deg)`; //is responsible for applying a random rotation transform to the kittyContainer element ...when this line of code is executed, it sets the transform property of the kittyContainer to a randomly generated rotation value, this results in the "kitty" element being rotated by a random angle between 0 and 360 degrees each time a new element is created.
+            kittyContainer.style.transform = `rotate(${Math.random() * 360}deg)`; //applying a random rotation transform to the kittyContainer element ...when this line of code is executed, it sets the transform property of the kittyContainer to a randomly generated rotation value, this results in the "kitty" element being rotated by a random angle between 0 and 360 degrees each time a new element is created.
             kittyContainer.addEventListener("click", handleKittyClick.bind(self), false);
             return kittyContainer;  // return the new container
         }
@@ -85,7 +85,7 @@ class Game {
                     easing: "ease-in-out",
                 }
             ).onfinish = () => {
-                kitty.remove(); // aemove the "kitty" element when the animation finishes
+                kitty.remove(); // remove the "kitty" element when the animation finishes
             };
         }
 
@@ -106,6 +106,8 @@ class Game {
         clearInterval(this.intervalKitties);
         clearInterval(this.intervalCounter);
         this.restartButton.style.display = "block";
+        // this.onTimerEnd.style.display = "none";
+
 
 
 
