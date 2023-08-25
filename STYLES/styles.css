@@ -91,7 +91,7 @@ body button {
     content: "";
 }
 
-/* GAME INTRO SCREEN */
+
 
 .container {
     position: absolute;
@@ -162,7 +162,7 @@ body button {
     align-items: flex-end;
 }
 
-/* HELLO KITTY CONTAINER */
+/* HELLO KITTY */
 .hello-kitty {
     background: white;
     width: 242px;
