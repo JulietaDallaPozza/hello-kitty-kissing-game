@@ -1,11 +1,6 @@
 
 
-
-
-
-
-const onTimerEnd = document.getElementById("on-timer-end"); // declare outside window.onload
-
+    const onTimerEnd = document.getElementById("on-timer-end"); // declare outside window.onload
 
     window.onload = function () {
     const startButton = document.getElementById("start-button");
