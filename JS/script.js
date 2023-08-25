@@ -9,8 +9,6 @@ window.onload = function () {
         game = new Game(); // inizialisate the game class when the button is clicked
         game.start(); // start the game
         
-        onTimerEnd.style.display = "none";
-
         playMusic.play();
 
     });

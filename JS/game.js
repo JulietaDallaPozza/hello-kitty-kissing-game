@@ -12,7 +12,7 @@ class Game {
         this.height = 300;
         this.width = 200;
         this.score = 0;
-        this.sec = 2;
+        this.sec = 11;
     }
 
     start() { //function defition
@@ -97,8 +97,6 @@ class Game {
                 this.gameOver()
             }
         }, 300);
-
-
     }
 
     gameOver() {
