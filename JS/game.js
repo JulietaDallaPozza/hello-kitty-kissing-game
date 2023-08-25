@@ -85,7 +85,7 @@ class Game {
                     easing: "ease-in-out",
                 }
             ).onfinish = () => {
-                kitty.remove(); // remove the "kitty" element when the animation finishes
+                kitty.remove(); // aemove the "kitty" element when the animation finishes
             };
         }
 
@@ -106,7 +106,7 @@ class Game {
         clearInterval(this.intervalKitties);
         clearInterval(this.intervalCounter);
         this.restartButton.style.display = "block";
-        // this.onTimerEnd.style.display = "none";
+        this.onTimerEnd.style.display = "none";
 
 
 
